@@ -1,0 +1,19 @@
+package com.cagatayinyurt.kotlinviewpager
+
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
+
+class ViewPagerAdapter(
+    val items: ArrayList<Fragment>,
+    activity: AppCompatActivity
+) : FragmentStateAdapter(activity) {
+
+    override fun createFragment(position: Int): Fragment {
+        return items[position]
+    }
+
+    override fun getItemCount(): Int {
+        return items.size
+    }
+}
